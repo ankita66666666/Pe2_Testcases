@@ -24,21 +24,36 @@ public class FactorialCalculatorTest {
 
     @Test
     public void testIntFactorialSuccessGivenNumberShouldReturnFactorial() {
-        assertEquals("testIntFactorialGivenNumberShouldReturnFactorial: check intFactorial()",
+        assertEquals("checkIntFactorialGivenNumberShouldReturnFactorial: check intFactorial()",
                 1, factorialCalculator.intFactorial(1));
 
-        assertEquals("testIntFactorialGivenNumberShouldReturnFactorial: check intFactorial()",
-                1, factorialCalculator.intFactorial(2));
+        assertEquals("checkIntFactorialGivenNumberShouldReturnFactorial: check intFactorial()",
+                1, factorialCalculator.intFactorial(4));
 
-        assertEquals("testIntFactorialGivenNumberShouldReturnFactorial: check intFactorial()",
+        assertEquals("checkIntFactorialGivenNumberShouldReturnFactorial: check intFactorial()",
                 1, factorialCalculator.intFactorial(12));
         //Test actual result = expected result();
     }
 
     @Test
-    public void testIntFactorialFailureGivenNumberShouldReturnNegativeOne() {
-        assertEquals("testIntFactorialGivenNumberShouldReturnFactorial: check intFactorial(), Should have returned -1",
+    public void checkIntFactorialFailureGivenNumberShouldReturnNegativeOne() {
+        assertEquals("checkIntFactorialGivenNumberShouldReturnFactorial: check intFactorial(), Should have returned -1",
                 -1, factorialCalculator.intFactorial(13));
     }
 
+
+    @Test
+    public void checkLongFactorialSuccessGivenNumberShouldReturnFactorial() {
+        assertEquals("checkLongFactorialSuccessGivenNumberShouldReturnFactorial: Check longFactorial()",
+                1, factorialCalculator.longFactorial(1));
+
+        assertEquals("checkLongFactorialSuccessGivenNumberShouldReturnFactorial: Check longFactorial()",
+                1, factorialCalculator.longFactorial(4));
+
+        assertEquals("checkLongFactorialSuccessGivenNumberShouldReturnFactorial: Check longFactorial()",
+                1, factorialCalculator.longFactorial(12));
+
+        assertEquals("checkLongFactorialSuccessGivenNumberShouldReturnFactorial: Check longFactorial()",
+                1, factorialCalculator.longFactorial(20));
+    }
 }

@@ -23,24 +23,35 @@ public class StudentGradeTest {
         studentsGrade = null;
     }
 
+
+
     @Test
-    public void checkCalculateAverageGivenStudentGradesShouldReturnAverage() {
-        int[] testStudentGrades = {86, 65, 98, 77};
-        studentsGrade.addStudentsGrade(testStudentGrades);
-        assertEquals("checkCalculateAverageGivenStudentGradesShouldReturnAverage: Check calculateAverage()",
+    public void testCalculateAvgGivenStudentGradesShouldReturnAvgGrade() {
+        int[] testStudentGrades = {26, 56, 88, 67};
+        studentsGrade.addStudentGrade(testStudentGrades);
+        assertEquals("testCalculateAvgGivenStudentGradesShouldReturnAverage: Check calculateAverage()",
                 81.50,
                 studentsGrade.calculateAverage(),
                 0.0);
-        //***Test actual result=expected result;
     }
 
     @Test
-    public void checkMaximumGradeGivenStudentGradesShouldReturnMaximumGrade() {
-        int[] testStudentGrades = {86, 65, 98, 77};
-        studentsGrade.addStudentsGrade(testStudentGrades);
-        assertEquals("checkMaximumGradeGivenStudentGradesShouldReturnMaximumGrade: check maximumGrade()",
+    public void testMaxGradeGivenStudentGradesShouldReturnMaxGrade() {
+        int[] testStudentGrades = {26, 56, 88, 67};
+        studentsGrade.addStudentGrade(testStudentGrades);
+        assertEquals("testMaxGradeGivenStudentGradesShouldReturnMaximumGrade: check maximumGrade()",
                 98, studentsGrade.maximumGrade());
     }
 
-
+    @Test
+    public void testMinGradeGivenStudentGradesShouldReturnMinGrade() {
+        int[] testStudentGrades = {26, 56, 88, 67};
+        studentsGrade.addStudentGrade(testStudentGrades);
+        assertEquals("testMinGradeGivenStudentGradesShouldReturnMinimumGrade: check minimumGrade()",
+                65, studentsGrade.minimumGrade());
     }
+}
+
+
+
+
