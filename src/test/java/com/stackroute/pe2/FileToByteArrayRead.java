@@ -1,3 +1,9 @@
+//package com.stackroute.pe2;
+
+//public class FileToByteArrayRead {
+//}
+
+
 
 package com.stackroute.pe2;
 
@@ -9,9 +15,9 @@ import java.io.FileNotFoundException;
 
 import static org.junit.Assert.*;
 
-public class FileToByteArrayReader {
+public class FileToByteArrayRead {
 
-     FileToByteArrayRead fileToByteArrayRead;
+    FileToByteArrayRead fileToByteArrayRead;
 
     @Before
     public void setUp() {

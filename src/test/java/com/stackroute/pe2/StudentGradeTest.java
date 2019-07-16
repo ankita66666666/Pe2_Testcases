@@ -10,11 +10,11 @@ import static org.junit.Assert.*;
 
 public class StudentGradeTest {
 
-     StudentGrade studentsGrade;
+     StudentsGrade studentsGrade;
 
     @Before
     public void setUp() {
-        studentsGrade = new StudentGrade();
+        studentsGrade = new StudentsGrade();
         //*****pass atleast one test case before exrcution;
     }
 
@@ -24,10 +24,10 @@ public class StudentGradeTest {
     }
 
     @Test
-    public void testCalculateAverageGivenStudentGradesShouldReturnAverage() {
+    public void checkCalculateAverageGivenStudentGradesShouldReturnAverage() {
         int[] testStudentGrades = {86, 65, 98, 77};
-        studentsGrade.addStudentGrade(testStudentGrades);
-        assertEquals("testCalculateAverageGivenStudentGradesShouldReturnAverage: Check calculateAverage()",
+        studentsGrade.addStudentsGrade(testStudentGrades);
+        assertEquals("checkCalculateAverageGivenStudentGradesShouldReturnAverage: Check calculateAverage()",
                 81.50,
                 studentsGrade.calculateAverage(),
                 0.0);
@@ -35,10 +35,10 @@ public class StudentGradeTest {
     }
 
     @Test
-    public void testMaximumGradeGivenStudentGradesShouldReturnMaximumGrade() {
+    public void checkMaximumGradeGivenStudentGradesShouldReturnMaximumGrade() {
         int[] testStudentGrades = {86, 65, 98, 77};
-        studentsGrade.addStudentGrade(testStudentGrades);
-        assertEquals("testMaximumGradeGivenStudentGradesShouldReturnMaximumGrade: check maximumGrade()",
+        studentsGrade.addStudentsGrade(testStudentGrades);
+        assertEquals("checkMaximumGradeGivenStudentGradesShouldReturnMaximumGrade: check maximumGrade()",
                 98, studentsGrade.maximumGrade());
     }
 
