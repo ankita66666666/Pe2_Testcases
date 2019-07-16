@@ -10,11 +10,12 @@ import static org.junit.Assert.*;
 
 public class StudentGradeTest {
 
-    private StudentGrade studentsGrade;
+     StudentGrade studentsGrade;
 
     @Before
     public void setUp() {
         studentsGrade = new StudentGrade();
+        //*****pass atleast one test case before exrcution;
     }
 
     @After
@@ -30,6 +31,7 @@ public class StudentGradeTest {
                 81.50,
                 studentsGrade.calculateAverage(),
                 0.0);
+        //***Test actual result=expected result;
     }
 
     @Test
@@ -40,11 +42,5 @@ public class StudentGradeTest {
                 98, studentsGrade.maximumGrade());
     }
 
-    @Test
-    public void testMinimumGradeGivenStudentGradesShouldReturnMinimumGrade() {
-        int[] testStudentGrades = {86, 65, 98, 77};
-        studentsGrade.addStudentGrade(testStudentGrades);
-        assertEquals("testMinimumGradeGivenStudentGradesShouldReturnMinimumGrade: check minimumGrade()",
-                65, studentsGrade.minimumGrade());
+
     }
-}

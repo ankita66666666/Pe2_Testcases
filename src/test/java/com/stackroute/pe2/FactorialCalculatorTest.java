@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 public class FactorialCalculatorTest {
 
     private FactorialCalculator factorialCalculator;
+
     @Before
     public void setUp() {
         factorialCalculator = new FactorialCalculator();
@@ -18,6 +19,7 @@ public class FactorialCalculatorTest {
     @After
     public void tearDown() {
         factorialCalculator = null;
+        //checking factorial=null;
     }
 
     @Test
@@ -30,6 +32,7 @@ public class FactorialCalculatorTest {
 
         assertEquals("testIntFactorialGivenNumberShouldReturnFactorial: check intFactorial()",
                 1, factorialCalculator.intFactorial(12));
+        //Test actual result = expected result();
     }
 
     @Test
@@ -38,24 +41,4 @@ public class FactorialCalculatorTest {
                 -1, factorialCalculator.intFactorial(13));
     }
 
-    @Test
-    public void testLongFactorialSuccessGivenNumberShouldReturnFactorial() {
-        assertEquals("testLongFactorialSuccessGivenNumberShouldReturnFactorial: Check longFactorial()",
-                1, factorialCalculator.longFactorial(1));
-
-        assertEquals("testLongFactorialSuccessGivenNumberShouldReturnFactorial: Check longFactorial()",
-                1, factorialCalculator.longFactorial(2));
-
-        assertEquals("testLongFactorialSuccessGivenNumberShouldReturnFactorial: Check longFactorial()",
-                1, factorialCalculator.longFactorial(13));
-
-        assertEquals("testLongFactorialSuccessGivenNumberShouldReturnFactorial: Check longFactorial()",
-                1, factorialCalculator.longFactorial(20));
-    }
-
-    @Test
-    public void  testLongFactorialFailureGivenNumberShouldReturnNegativeOne() {
-        assertEquals("testLongFactorialFailureGivenNumberShouldReturnNegativeOne: Check longFactorial(), Should return -1",
-                -1, factorialCalculator.longFactorial(21));
-    }
 }

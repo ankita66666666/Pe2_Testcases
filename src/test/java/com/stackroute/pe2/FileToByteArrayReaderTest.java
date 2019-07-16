@@ -9,26 +9,26 @@ import java.io.FileNotFoundException;
 
 import static org.junit.Assert.*;
 
-public class FileToByteArrayReaderTest {
+public class FileToByteArrayReader {
 
-    private FileToByteArrayReader fileToByteArrayReader;
+     FileToByteArrayRead fileToByteArrayRead;
 
     @Before
     public void setUp() {
-        fileToByteArrayReader = new FileToByteArrayReader();
+        fileToByteArrayRead = new FileToByteArrayRead();
     }
 
     @After
     public void tearDown() {
-        fileToByteArrayReader = null;
+        fileToByteArrayRead = null;
     }
 
     @Test
-    public void testReadFileSuccessGivenFileNameAndExtensionShouldReturnByteArray() {
+    public void GivenReadFileSuccessAndExtensionShouldReturnByteArray() {
         String testString = "Hello. This is a test string";
         byte[] testByteArray = testString.getBytes();
         assertArrayEquals("testReadFileSuccessGivenFileNameAndExtensionShouldReturnByteArray: check readFile()",
-                testByteArray, fileToByteArrayReader.readFile("test", "txt"));
+                testByteArray, fileToByteArrayRead.readFile("test", "txt"));
     }
 
 
@@ -37,7 +37,7 @@ public class FileToByteArrayReaderTest {
      * when the wrong(non-existent) file path is given.
      */
     @Test(expected = FileNotFoundException.class)
-    public void testReadFileFailureGivenFileNameAndExtensionShouldReturnFileNotFoundException() {
-        fileToByteArrayReader.readFile("test1", "txt");
+    public void GivenReadFileFailureAndExtensionShouldReturnFileNotFoundException() {
+        fileToByteArrayRead.readFile("test1", "txt");
     }
 }
