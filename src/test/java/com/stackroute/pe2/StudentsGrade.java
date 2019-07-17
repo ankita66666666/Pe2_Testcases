@@ -8,19 +8,19 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class StudentGradeTest {
+public class StudentsGrade {
 
-     StudentsGrade studentsGrade;
+     StudentGrade studentGrade;
 
     @Before
     public void setUp() {
-        studentsGrade = new StudentsGrade();
+        studentGrade = new StudentGrade();
         //*****pass atleast one test case before exrcution;
     }
 
     @After
     public void tearDown() {
-        studentsGrade = null;
+        studentGrade = null;
     }
 
 
@@ -28,27 +28,27 @@ public class StudentGradeTest {
     @Test
     public void testCalculateAvgGivenStudentGradesShouldReturnAvgGrade() {
         int[] testStudentGrades = {26, 56, 88, 67};
-        studentsGrade.addStudentGrade(testStudentGrades);
+        studentGrade.addStudentGrade(testStudentGrades);
         assertEquals("testCalculateAvgGivenStudentGradesShouldReturnAverage: Check calculateAverage()",
-                81.50,
-                studentsGrade.calculateAverage(),
+                59.25,
+                studentGrade.calculateAverage(),
                 0.0);
     }
 
     @Test
     public void testMaxGradeGivenStudentGradesShouldReturnMaxGrade() {
         int[] testStudentGrades = {26, 56, 88, 67};
-        studentsGrade.addStudentGrade(testStudentGrades);
+        studentGrade.addStudentGrade(testStudentGrades);
         assertEquals("testMaxGradeGivenStudentGradesShouldReturnMaximumGrade: check maximumGrade()",
-                98, studentsGrade.maximumGrade());
+                88, studentGrade.maximumGrade());
     }
 
     @Test
     public void testMinGradeGivenStudentGradesShouldReturnMinGrade() {
         int[] testStudentGrades = {26, 56, 88, 67};
-        studentsGrade.addStudentGrade(testStudentGrades);
+        studentGrade.addStudentGrade(testStudentGrades);
         assertEquals("testMinGradeGivenStudentGradesShouldReturnMinimumGrade: check minimumGrade()",
-                65, studentsGrade.minimumGrade());
+                26, studentGrade.minimumGrade());
     }
 }
 
